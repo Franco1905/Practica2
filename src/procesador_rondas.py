@@ -75,3 +75,15 @@ def imprimir_resultados_totales(totalPartida):
     print('*' * 32)
     for player, stats in totalPartida.items():
         print(f"{player}: {stats}")
+
+# hace todo
+def code (rounds, totalPartida , puntosTotales):    
+    for i, round_data in enumerate(rounds):
+     totalRonda, maxPlay, maxPuntos = procesar_ronda(round_data, totalPartida, puntosTotales)
+     imprimir_resultados_ronda(i + 1, totalRonda, maxPlay, maxPuntos)
+     for player in puntosTotales:
+         puntosTotales[player] = 0
+
+# Imprimir los resultados totales
+    return(totalPartida)
+        
